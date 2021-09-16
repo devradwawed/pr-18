@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap');
+
+/*
+=====================
+  public style
+========================
+ */
+* , body , ::before , ::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+body{
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #f7f7f7ff;
+}
+:root{
+  --fristColor:#FF003C;
+  --secndeColor:#141517;
+}
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+}
+
+/* 
+==================================
+          Navber
+==================================
+*/
+nav {
+  background: #fff;
+  width: 100%;
+  padding: 28px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .brand{
+  width: 25%;
+}
+
+nav .brand img{
+  
+}
+
+nav .list{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .list .item{
+  position: relative;
+  padding: 13px 0 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+nav .list .item{
+  position: relative;
+  padding: 13px 0 0;
+}
+
+nav .list .item:nth-child(4)::after{
+  content: 'HOT';
+  position: absolute;
+  background-color: var(--fristColor);
+  color: #fff;
+  padding: 3px 8px;
+  font-size: 10px;
+  border-radius: 8px;
+  top: -24px;
+  filter: drop-shadow(2px 4px 6px #ccc);
+}
+
+
+nav .list .item .dropdown{
+  position: absolute;
+  background: #fff;
+  width: 184px;
+  padding: 21px;
+  top: 69px;
+  border-top: 3px solid #ff003c;
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -ms-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  filter: drop-shadow(2px 4px 6px #ccc);
+}
+nav .list .item:hover .dropdown{
+  opacity: 1;
+  visibility: visible;
+  top: 50px;
+}
+nav .list .item .dropdown::before{
+  content: '';
+  position: absolute;
+  top: -23px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid #f00;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+nav .list .item .dropdown .drop{
+  margin-bottom: 10px;
+}
+nav .list .item a{
+  color: var(--secndeColor);
+}
+nav .icon{
+  width: 25%;
+  text-align: right;
+}
+nav .icon a{
+  margin-right: 10px;
+  color: var(--secndeColor);
+  font-size: 18px;
+}
+nav label , nav #inp{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*======================= madia query ========================*/
+@media (max-width:1119px) {
+  
+}
+@media (max-width:991px) {
+  /* ==========navber=============== */
+  nav .brand {
+    width: 30%;
+}
+  nav .brand  img{
+    width: 100%;
+  }
+  nav label{
+    display: block;
+    order: 2;
+  }
+  nav .list {
+    display: unset;
+    position: absolute;
+    background-color: #ccc;
+    top: 100px;
+    width: 90%;
+    left: 5%;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s ease-in;
+    -webkit-transition: all .4s ease-in;
+    -moz-transition: all .4s ease-in;
+    -ms-transition: all .4s ease-in;
+    -o-transition: all .4s ease-in;
+}
+  nav #inp:checked ~ .list{
+    opacity: 1;
+    visibility: visible;
+    top: 83px;
+  }
+  nav .list .item:nth-child(4)::after {
+    display: none;
+  }
+  nav .list .item .dropdown {
+    position: unset;
+    background:transparent;
+    padding: 7px 7px 0;
+    border-top:0;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    filter:0;
+    -webkit-filter:0;
+    display: none;
+}
+nav .list .item:hover .dropdown {
+  display: block;
+}
+nav .list .item .dropdown::before {
+  display: none;
+}
+  nav .icon a {
+    margin-right: 6px;
+  }
+}
+
+
+
+@media (max-width:767px) {
+  
+}
+@media (max-width:575px) {
+  
+}
